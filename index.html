@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>dummy.</title>
+		<link href="/dist/output.css" rel="stylesheet" />
+		<link href="/dist/helper.css" rel="stylesheet" />
+		<script defer src="./js/script.js"></script>
+	</head>
+	<body class="flex w-screen items-center justify-center bg-gray-primary font-inter">
+		<section class="container h-screen">
+			<main class="grid h-full w-full place-items-center">
+				<div>
+					<div>
+						<div class="relative flex h-[40px] w-[282px] items-center justify-center font-extrabold text-neon-green text-3xl">dummy.</div>
+						<div class="relative my-2 flex h-[45px] w-[282px] items-start justify-center leading-none text-text-color text-opacity-80 text-xs"><span>Create a dummy account name without thinking of a name.</span></div>
+					</div>
+					<div class="mt-5">
+						<div class="relative h-[45px] w-[282px] rounded-sm border border-gray-500 bg-gray-bg outline-none">
+							<input class="flex h-full w-full appearance-none items-center justify-start rounded-sm border-none bg-transparent px-2 text-text-color outline-none text-sm focus:ring-1 focus:ring-neon-green" id="generated-text" />
+							<div class="absolute right-0 top-0 grid h-full w-12 place-items-center border-l border-gray-500">
+								<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="group h-5 w-5" id="copyString">
+									<path d="M16 12.9V17.1C16 20.6 14.6 22 11.1 22H6.9C3.4 22 2 20.6 2 17.1V12.9C2 9.4 3.4 8 6.9 8H11.1C14.6 8 16 9.4 16 12.9Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-text-color group-hover:stroke-neon-green" />
+									<path d="M22 6.9V11.1C22 14.6 20.6 16 17.1 16H16V12.9C16 9.4 14.6 8 11.1 8H8V6.9C8 3.4 9.4 2 12.9 2H17.1C20.6 2 22 3.4 22 6.9Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-text-color group-hover:stroke-neon-green" />
+								</svg>
+							</div>
+						</div>
+						<div class="my-2 grid h-[45px] w-[282px] grid-cols-4 items-center justify-center gap-x-2">
+							<div class="col-span-2 flex h-full items-center justify-center gap-2">
+								<input class="bg-transparent text-neon-green focus:ring focus:ring-neon-green" type="radio" id="gmail_account" name="option" />
+								<label for="gmail_account"><span class="text-text-color text-sm">gmail account</span></label>
+							</div>
+							<div class="col-span-2 flex h-full items-center justify-center gap-2">
+								<input class="bg-transparent text-neon-green focus:ring focus:ring-neon-green" type="radio" id="username" name="option" />
+								<label for="username"><span class="text-text-color text-sm">username</span></label>
+							</div>
+						</div>
+						<button id="submitBtn" class="h-[45px] w-[282px] appearance-none rounded-sm border-none bg-neon-green outline-none duration-100 hover:scale-95 hover:bg-opacity-80"><span class="font-bold text-gray-primary text-sm">Generate</span></button>
+					</div>
+				</div>
+			</main>
+		</section>
+	</body>
+</html>

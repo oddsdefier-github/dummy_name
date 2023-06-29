@@ -1,0 +1,18 @@
+{
+	"name": "random_username",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@tailwindcss/forms": "^0.5.3",
+		"prettier": "^2.8.8",
+		"prettier-plugin-tailwindcss": "^0.3.0",
+		"tailwindcss": "^3.3.2",
+		"tailwindcss-font-inter": "^3.0.1"
+	}
+}
