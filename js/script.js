@@ -16,18 +16,10 @@ function copyToClipboard() {
     generateText.select();
     generateText.setSelectionRange(0, 99999);
 
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(generateText.value)
-            .then(() => {
-                alert("Copied the text: " + generateText.value);
-            })
-            .catch((error) => {
-                console.error("Failed to copy text: ", error);
-            });
-    } else {
-        generateText.focus();
-        alert("Press and hold the text, then choose 'Copy' from the context menu to copy the text: " + generateText.value);
-    }
+    // navigator.clipboard.writeText(generateText.value);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Copied the text: " + generateText.value);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
