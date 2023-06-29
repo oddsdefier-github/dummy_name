@@ -1,5 +1,7 @@
 let generateText = document.getElementById("generated-text");
 let copyText = document.getElementById("copyString")
+let checkIcon = document.getElementById("check")
+let copyIcon = document.getElementById("copy")
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 function generateString(length) {
@@ -19,7 +21,7 @@ function copyToClipboard() {
     // navigator.clipboard.writeText(generateText.value);
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
-    alert("Copied the text: " + generateText.value);
+    // alert("Copied the text: " + generateText.value);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,17 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.addEventListener("click", () => {
         let generatedString = generateString(10)
         generateText.value = generatedString
-        console.log(generatedString)
-        console.log(generateText.value)
+        checkIcon.classList.add("hidden");
+        copyIcon.classList.remove("hidden");
+        // console.log(generatedString)
+        // console.log(generateText.value)
     });
-
-
-
 
     copyText.addEventListener("click", () => {
         generateText.value = generateText.value.trim();
         if (generateText.value != "") {
-            copyToClipboard()
+            checkIcon.classList.toggle("hidden");
+            copyIcon.classList.toggle("hidden");
+            copyToClipboard();
         } else {
             console.log("empty")
         }
