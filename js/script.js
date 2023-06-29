@@ -18,11 +18,11 @@ function copyToClipboard() {
     generateText.select();
     generateText.setSelectionRange(0, 99999);
 
-    // navigator.clipboard.writeText(generateText.value);
     document.execCommand("copy");
     window.getSelection().removeAllRanges();
-    // alert("Copied the text: " + generateText.value);
+    alert("Copied the text: " + generateText.value);
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     // let gmail = document.getElementById("gmail_account");
@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         generateText.value = generatedString
         checkIcon.classList.add("hidden");
         copyIcon.classList.remove("hidden");
-        // console.log(generatedString)
-        // console.log(generateText.value)
     });
 
     copyText.addEventListener("click", () => {
@@ -44,12 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
             checkIcon.classList.toggle("hidden");
             copyIcon.classList.toggle("hidden");
             copyToClipboard();
-        } else {
-            console.log("empty")
         }
     })
-
-
-
-
 });
+
